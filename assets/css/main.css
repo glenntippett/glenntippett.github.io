@@ -57,6 +57,22 @@ html {
 
 /* End of reset */
 
+h1, h2 {
+	color: whitesmoke;
+	font-family: 'Raleway', sans-serif;
+}
+
+h1 {
+	font-size: 3em;
+	margin: 0.4em;
+}
+
+h2 {
+	font-size: 1.5em;
+	opacity: 0.7;
+}
+
+
 #main-container {
 	display: flex;
 	justify-content: center;
@@ -76,6 +92,7 @@ html {
 	margin: 1em;
 	color: #FEDC56;
 	font-family: 'Roboto', sans-serif;
+	font-size: 1.1em;
 	letter-spacing: 0.025em;
 	line-height: 1.3em;
 	padding: 1em;
@@ -86,11 +103,13 @@ html {
 	padding: 0.5em 1em;
 	border-radius: 10px;
 	font-family: 'Raleway', sans-serif;
-	background-color: transparent;
+	background-color: #283c9e;
 	color: white;
 	font-size: 1.2em;
+	outline: none;
 }
 
 #joke-button:hover {
-
+	background-color: #004c4c;
+	cursor: pointer;
 }
