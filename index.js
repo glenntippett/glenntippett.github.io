@@ -1,36 +1,23 @@
-let lightMode = true;
-const btn = document.querySelector('button');
-const arrow = document.querySelector('.arrow');
+let isLightMode = true;
+const btn = document.querySelector("button");
 
 function changeLightDarkMode() {
-  lightMode = !lightMode;
+  isLightMode = !isLightMode;
 }
 
 function handleThemeBtnClick() {
-  const pageTitle = document.querySelector('h1');
-  if (lightMode) {
+  const pageTitle = document.querySelector("h1");
+  if (isLightMode) {
     pageTitle.innerText = "Hey, I'm evil Glenn";
     btn.innerText = "Light Mode";
   }
 
-  if (!lightMode) {
+  if (!isLightMode) {
     pageTitle.innerText = "Hey, I'm Glenn";
     btn.innerText = "Dark Mode";
   }
   changeLightDarkMode();
 }
 
-function handleArrowClick() {
-  text = `
-    <span class="helper-text">(Not a button, try scrolling)</span>
-  `;
-  if (!document.querySelector('.helper-text')) {
-    arrow.insertAdjacentHTML('beforeend', text)
-  }
-}
-
 // Dark/Light mode button event
-btn.addEventListener('click', handleThemeBtnClick);
-
-// Arrow click event
-arrow.addEventListener('click', handleArrowClick);
+btn.addEventListener("click", handleThemeBtnClick);
