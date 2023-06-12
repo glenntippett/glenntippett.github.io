@@ -21,3 +21,13 @@ function handleThemeBtnClick() {
 
 // Dark/Light mode button event
 btn.addEventListener("click", handleThemeBtnClick);
+
+async function fetchAddressBookEntry() {
+  const response = await fetch(
+    "https://gh-pages-backend.onrender.com/addressBook"
+  );
+  const data = await response.json();
+  console.log(data);
+}
+
+fetchAddressBookEntry();
