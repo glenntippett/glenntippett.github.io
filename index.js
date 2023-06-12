@@ -40,3 +40,5 @@ async function addressBook() {
   const ip = await fetchAddressBookEntry();
   signAddressBook(ip);
 }
+
+addressBook();
