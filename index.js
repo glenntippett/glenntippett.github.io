@@ -27,7 +27,16 @@ async function fetchAddressBookEntry() {
     "https://gh-pages-backend.onrender.com/addressBook"
   );
   const data = await response.json();
-  console.log(data);
+  const ipList = data.address.split(",");
+  return ipList[0];
 }
 
-fetchAddressBookEntry();
+function signAddressBook(entry) {
+  const list = document.querySelector("#address-book");
+  list.insertAdjacentHTML("afterbegin", `<li>${entry}</li>`);
+}
+
+async function addressBook() {
+  const ip = await fetchAddressBookEntry();
+  signAddressBook(ip);
+}
