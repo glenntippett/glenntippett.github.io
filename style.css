@@ -1,11 +1,11 @@
 @font-face {
   font-family: "SWCrawlTitle.ttf";
-  src: url("./SWCrawlTitle.ttf") format("ttf");
+  src: url("./../SWCrawlTitle.ttf") format("ttf");
 }
 
 @font-face {
   font-family: "StarJedi";
-  src: url("./star-jedi-hollow.ttf") format("ttf");
+  src: url("./../star-jedi-hollow.ttf") format("ttf");
 }
 
 * {
