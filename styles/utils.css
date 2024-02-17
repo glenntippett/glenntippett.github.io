@@ -1,0 +1,22 @@
+/* Wrapper/Containers */
+.container {
+  margin-left: var(--space-xxl);
+  margin-right: var(--space-xxl);
+}
+
+/* Margin */
+.mt-1 {
+  margin-top: var(--space-unit);
+}
+
+.mb-1 {
+  margin-bottom: var(--space-unit);
+}
+
+.mt-2 {
+  margin-top: var(--space-md);
+}
+
+.mb-2 {
+  margin-bottom: var(--space-md);
+}

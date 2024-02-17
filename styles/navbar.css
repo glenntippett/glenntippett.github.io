@@ -1,0 +1,19 @@
+.navbar {
+  --navbar-border: 1px solid var(--grey);
+
+  display: flex;
+  justify-content: center;
+  padding-top: var(--space-md);
+  padding-bottom: var(--space-md);
+  font-family: var(--font-heading);
+  border-bottom: var(--navbar-border);
+
+  ul {
+    display: flex;
+    gap: var(--space-lg);
+  }
+}
+
+.navbar__item:hover {
+  cursor: pointer;
+}

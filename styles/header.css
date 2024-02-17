@@ -1,0 +1,15 @@
+.header {
+  max-width: 50%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start; /* stop content expanding full width in flex-column view */
+}
+
+.header__subheading {
+  font-size: var(--space-md);
+  font-family: var(--font-body);
+  max-width: 75%;
+  color: #555555;
+}

@@ -1,0 +1,28 @@
+/* https://medium.com/codyhouse/create-your-design-system-part-4-spacing-895c9213e2b9 */
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+:root {
+  /* Font */
+  --font-heading: "Playfair Display" serif;
+  --font-body: "Roboto", sans-serif;
+  --base-font-size: 18px;
+  --line-height: 1.6;
+
+  /* Spacing */
+  --space-unit: 1em;
+  --space-xxs: calc(0.25 * var(--space-unit));
+  --space-xs: calc(0.64 * var(--space-unit));
+  --space-sm: calc(0.8 * var(--space-unit));
+  --space-md: calc(1.25 * var(--space-unit));
+  --space-lg: calc(1.563 * var(--space-unit));
+  --space-xl: calc(1.953 * var(--space-unit));
+  --space-xxl: calc(2.441 * var(--space-unit));
+  --space-xxxl: calc(3.052 * var(--space-unit));
+  --space-xxxxl: calc(3.815 * var(--space-unit));
+
+  /*
+    Colors 
+    https://observablehq.com/@taekie/le-corbusier-color-pallete
+  */
+  --grey: #eee;
+}

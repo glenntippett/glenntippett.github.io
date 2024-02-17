@@ -1,0 +1,43 @@
+@import url(variables.css);
+@import url(reset.css);
+@import url(utils.css);
+@import url(navbar.css);
+@import url(header.css);
+@import url(button.css);
+
+body {
+  font-size: var(--base-font-size);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+}
+
+h1 {
+  font-size: var(--space-xxxxl);
+}
+
+h2 {
+  font-size: var(--space-xxxl);
+}
+
+h3 {
+  font-size: var(--space-xxl);
+}
+
+h4 {
+  font-size: var(--space-xl);
+}
+
+h5 {
+  font-size: var(--space-lg);
+}
+
+h6 {
+  font-size: var(--space-md);
+}
