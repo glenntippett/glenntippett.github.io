@@ -1,0 +1,38 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+}
+
+h1 {
+  font-size: var(--space-xxxxl);
+  padding-bottom: var(--space-xxs);
+}
+
+h2 {
+  font-size: var(--space-xxxl);
+}
+
+h3 {
+  font-size: var(--space-xxl);
+}
+
+h4 {
+  font-size: var(--space-xl);
+}
+
+h5 {
+  font-size: var(--space-lg);
+}
+
+h6 {
+  font-size: var(--space-md);
+}
+
+p {
+  font-size: var(--space-unit);
+  line-height: var(--space-md);
+}
