@@ -1,15 +1,23 @@
 .header {
-  max-width: 50%;
-  min-height: 100vh;
+  min-height: 80vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start; /* stop content expanding full width in flex-column view */
+
+  @media (min-width: 800px) {
+    max-width: 50%;
+    min-height: 100vh;
+  }
 }
 
 .header__subheading {
   font-size: var(--space-md);
   font-family: var(--font-body);
-  max-width: 75%;
+  margin-bottom: var(--space-unit);
   color: #555555;
+
+  @media (min-width: 800px) {
+    max-width: 75%;
+  }
 }
