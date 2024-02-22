@@ -10,6 +10,7 @@ h6 {
 h1 {
   font-size: var(--space-xxxxl);
   padding-bottom: var(--space-xxs);
+  font-weight: 600;
 }
 
 h2 {

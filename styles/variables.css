@@ -3,7 +3,7 @@
 
 :root {
   /* Font */
-  --font-heading: "Playfair Display" serif;
+  --font-heading: "Playfair Display", serif;
   --font-body: "Roboto", sans-serif;
   --base-font-size: 18px;
   --line-height: 1.6;
