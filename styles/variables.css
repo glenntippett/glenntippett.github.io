@@ -25,4 +25,14 @@
     https://observablehq.com/@taekie/le-corbusier-color-pallete
   */
   --grey: #eee;
+
+  /* Breakpoints */
+  /* Phone ~720px */
+  --small-device: 40em;
+  /* Tablet ~864px */
+  --medium-device: 48em;
+  /* Laptop ~1152px */
+  --large-device: 64em;
+  /* Desktop ~1440px */
+  --xl-device: 80em;
 }

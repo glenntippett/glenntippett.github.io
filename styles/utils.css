@@ -1,10 +1,30 @@
 /* Wrapper/Containers */
 .container {
+  /* Phone */
   margin-left: var(--space-md);
   margin-right: var(--space-md);
 
-  @media (min-width: 800px) {
+  /* Tablet */
+  @media (min-width: 720px) {
+    margin-left: var(--space-xl);
+    margin-right: var(--space-xl);
+  }
+
+  /* Laptop */
+  @media (min-width: 864px) {
     margin-left: var(--space-xxl);
     margin-right: var(--space-xxl);
+  }
+
+  /* Desktop */
+  @media (min-width: 1152px) {
+    margin-left: var(--space-xxxl);
+    margin-right: var(--space-xxxl);
+  }
+
+  /* Extra large */
+  @media (min-width: 1440px) {
+    margin-left: var(--space-xxxxl);
+    margin-right: var(--space-xxxxl);
   }
 }

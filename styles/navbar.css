@@ -1,11 +1,11 @@
 .navbar {
   --navbar-border: 1px solid var(--grey);
-  --navbar-height: var(--space-xxxl);
 
   display: flex;
   justify-content: center;
   font-family: var(--font-heading);
   border-bottom: var(--navbar-border);
+  height: var(--space-xxl);
 
   ul {
     display: flex;
@@ -13,8 +13,9 @@
     gap: var(--space-lg);
   }
 
-  @media (min-width: 800px) {
-    height: var(--navbar-height);
+  /* Tablet */
+  @media (min-width: 720px) {
+    height: var(--space-xxxl);
   }
 }
 
