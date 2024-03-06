@@ -1,7 +1,5 @@
 function fadeInObserver(entries, observer) {
   entries.forEach((entry) => {
-    console.log(entry.intersectionRatio);
-
     if (entry.isIntersecting) {
       entry.target.classList.add("in-view");
       observer.unobserve(entry.target);
@@ -11,7 +9,6 @@ function fadeInObserver(entries, observer) {
 
 function fadeInOnScroll() {
   const contentToFadeIn = document.querySelectorAll(".fade");
-
   const observer = new IntersectionObserver(fadeInObserver, {
     root: null,
     rootMargin: "0px",
