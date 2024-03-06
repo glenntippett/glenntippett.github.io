@@ -1,11 +1,258 @@
-@import url(variables.css);
-@import url(reset.css);
-@import url(typography.css);
-@import url(utils.css);
-@import url(navbar.css);
-@import url(header.css);
-@import url(button.css);
+/* https://medium.com/codyhouse/create-your-design-system-part-4-spacing-895c9213e2b9 */
+:root {
+  /* Font */
+  --font-heading: "Space Mono", monospace;
+  --font-body: "Hanken Grotesk", sans-serif;
+  --base-font-size: 18px;
+  --small-base-font-size: 16px;
+  --line-height: 1.6;
+
+  /* Spacing */
+  --space-unit: 1em;
+  --space-xxs: calc(0.25 * var(--space-unit));
+  --space-xs: calc(0.64 * var(--space-unit));
+  --space-sm: calc(0.8 * var(--space-unit));
+  --space-md: calc(1.25 * var(--space-unit));
+  --space-lg: calc(1.563 * var(--space-unit));
+  --space-xl: calc(1.953 * var(--space-unit));
+  --space-xxl: calc(2.441 * var(--space-unit));
+  --space-xxxl: calc(3.052 * var(--space-unit));
+  --space-xxxxl: calc(3.815 * var(--space-unit));
+
+  /*
+    Colors 
+    https://observablehq.com/@taekie/le-corbusier-color-pallete
+  */
+  --grey: #eee;
+  --grey-secondary: #dcdcdc;
+
+  --bg-main: #f4f4f4;
+
+  /* Breakpoints */
+  /* Phone ~720px */
+  --small-device: 40em;
+  /* Tablet ~864px */
+  --medium-device: 48em;
+  /* Laptop ~1152px */
+  --large-device: 64em;
+  /* Desktop ~1440px */
+  --xl-device: 80em;
+}
+
+html {
+  scroll-behavior: smooth;
+}
 
 body {
-  font-size: var(--base-font-size);
+  background-color: var(--bg-main);
+  /* Phone & above */
+  font-size: var(--small-base-font-size);
+
+  /* Laptop & above */
+  @media (min-width: 864px) {
+    font-size: var(--base-font-size);
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+}
+
+h1 {
+  font-size: var(--space-xxxxl);
+  padding-bottom: var(--space-xxs);
+  font-weight: 600;
+}
+
+h2 {
+  font-size: var(--space-xxxl);
+}
+
+h3 {
+  font-size: var(--space-xxl);
+}
+
+h4 {
+  font-size: var(--space-xl);
+}
+
+h5 {
+  font-size: var(--space-lg);
+}
+
+h6 {
+  font-size: var(--space-md);
+}
+
+p {
+  font-size: var(--space-unit);
+  line-height: var(--space-lg);
+  font-family: var(--font-body);
+}
+
+hr {
+  border: none;
+  background: var(--grey-secondary);
+  width: 50%;
+  max-width: 75%;
+  height: 1px;
+  margin: 2em 0;
+}
+
+.container {
+  /* Phone */
+  margin: 0 auto;
+  width: 90vw;
+
+  /* Tablet */
+  @media (min-width: 720px) {
+    width: 90vw;
+  }
+
+  /* Laptop */
+  @media (min-width: 864px) {
+    width: 75vw;
+  }
+
+  /* Desktop */
+  @media (min-width: 1152px) {
+    width: 60vw;
+  }
+
+  /* Extra large */
+  @media (min-width: 1440px) {
+    width: 60vw;
+  }
+}
+
+.fade {
+  transform: translateY(var(--space-sm));
+  opacity: 0;
+  transition-property: transform, opacity;
+  transition-duration: 500ms;
+  transition-timing-function: ease-in-out;
+}
+
+.fade.in-view {
+  transform: none;
+  opacity: 1;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: inherit;
+  height: var(--space-xxl);
+  padding-bottom: var(--space-sm);
+  padding-top: var(--space-md);
+  background-color: var(--bg-main);
+  /* Keep at top of screen */
+  position: fixed;
+  top: 0;
+  overflow: hidden;
+  border-bottom: 1px solid var(--grey-secondary);
+}
+
+/* Add a top margin to account for fixed nav */
+main {
+  /* Navbar height + padding-bottom + padding-top */
+  margin-top: calc(var(--space-xxl) + var(--space-xl) + var(--space-md));
+
+  /* Tablet */
+  @media (min-width: 720px) {
+    margin-top: calc(var(--space-xxl) + var(--space-xxl) + var(--space-md));
+  }
+
+  /* Laptop */
+  @media (min-width: 864px) {
+    margin-top: calc(var(--space-xxl) + var(--space-xxxl) + var(--space-md));
+  }
+
+  /* Desktop */
+  @media (min-width: 1152px) {
+    margin-top: calc(var(--space-xxl) + var(--space-xxxxl) + var(--space-md));
+  }
+}
+
+.navbar__item {
+  font-size: 1em;
+  opacity: 0.5;
+  transition: 300ms;
+  color: inherit;
+  text-decoration: none;
+  font-family: var(--font-heading);
+}
+
+.navbar__item:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.content {
+  max-width: 100%;
+  /* Tablet */
+  @media (min-width: 720px) {
+    max-width: 75%;
+  }
+
+  /* Laptop */
+  @media (min-width: 864px) {
+    max-width: 75%;
+  }
+
+  /* Desktop */
+  @media (min-width: 1152px) {
+    max-width: 70%;
+  }
+
+  /* Extra large */
+  @media (min-width: 1440px) {
+    width: 60%;
+  }
+}
+
+.content__header {
+  display: flex;
+  gap: var(--space-sm);
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start; /* stop content expanding full width in flex-column view */
+
+  /* Tablet */
+  @media (min-width: 720px) {
+    gap: var(--space-xs);
+  }
+}
+
+.content__subheading {
+  font-size: var(--space-md);
+  font-family: var(--font-body);
+  margin-bottom: var(--space-unit);
+  color: #555555;
+  line-height: var(--space-lg);
+
+  @media (min-width: 864px) {
+    max-width: 75%;
+    line-height: var(--space-md);
+  }
+}
+
+.button--primary {
+  background-color: #4e4d4d;
+  color: white;
+  text-decoration: none;
+  padding: var(--space-xs) var(--space-lg);
+  border-radius: 4px;
+  font-family: var(--font-body);
+}
+
+.button--primary:hover {
+  cursor: pointer;
+  background-color: #676666;
 }
