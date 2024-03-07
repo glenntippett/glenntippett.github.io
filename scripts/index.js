@@ -41,14 +41,14 @@ function themeToggle() {
   toggle.onclick = function () {
     const currentTheme = document.documentElement.getAttribute("data-theme");
     let targetTheme = "light";
-    let toggleIcon = "moon";
-    let newToggleIcon = "sun";
+    let toggleIcon = "sun";
+    let newToggleIcon = "moon";
 
     if (currentTheme === "light") {
       targetTheme = "dark";
     } else {
-      toggleIcon = "sun";
-      newToggleIcon = "moon";
+      toggleIcon = "moon";
+      newToggleIcon = "sun";
     }
 
     document.documentElement.setAttribute("data-theme", targetTheme);

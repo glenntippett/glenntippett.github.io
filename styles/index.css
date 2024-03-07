@@ -41,15 +41,26 @@
 
 html[data-theme="light"] {
   --bg-primary: var(--grey-1);
+  --bg-secondary: var(--grey-5);
+  --bg-inverted: var(--grey-5);
+
   --border-color: var(--grey-2);
+
   --font-color-primary: var(--grey-5);
   --font-color-secondary: var(--grey-4);
+  --font-color-inverted: var(--grey-2);
 }
+
 html[data-theme="dark"] {
   --bg-primary: var(--grey-5);
+  --bg-secondary: var(--grey-1);
+  --bg-inverted: var(--grey-4);
+
   --border-color: var(--grey-2);
+
   --font-color-primary: var(--grey-2);
   --font-color-secondary: var(--grey-3);
+  --font-color-inverted: var(--grey-2);
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -118,6 +129,25 @@ hr {
   max-width: 75%;
   height: 1px;
   margin: 2em 0;
+}
+
+.section--inverted {
+  background-color: var(--bg-inverted);
+  color: var(--font-color-inverted);
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+}
+
+.stack--gap {
+  gap: var(--space-xs);
+
+  /* Tablet */
+  @media (min-width: 720px) {
+    gap: var(--space-unit);
+  }
 }
 
 .container {
@@ -199,11 +229,11 @@ main {
 .navbar--right {
   display: flex;
   align-items: center;
-  gap: var(--space-xs);
+  gap: var(--space-md);
 
   /* Tablet */
   @media (min-width: 720px) {
-    gap: var(--space-sm);
+    gap: var(--space-lg);
   }
 }
 
@@ -248,7 +278,7 @@ main {
 
   /* Extra large */
   @media (min-width: 1440px) {
-    width: 60%;
+    max-width: 60%;
   }
 }
 
