@@ -25,7 +25,42 @@ function scrollToTop() {
   });
 }
 
+function themeToggle() {
+  const toggle = document.getElementById("theme-toggle");
+
+  const storedTheme =
+    localStorage.getItem("theme") ||
+    (window.matchMedia("(prefers-color-scheme: dark)").matches
+      ? "dark"
+      : "light");
+
+  if (storedTheme) {
+    document.documentElement.setAttribute("data-theme", storedTheme);
+  }
+
+  toggle.onclick = function () {
+    const currentTheme = document.documentElement.getAttribute("data-theme");
+    let targetTheme = "light";
+    let toggleIcon = "moon";
+    let newToggleIcon = "sun";
+
+    if (currentTheme === "light") {
+      targetTheme = "dark";
+    } else {
+      toggleIcon = "sun";
+      newToggleIcon = "moon";
+    }
+
+    document.documentElement.setAttribute("data-theme", targetTheme);
+    toggle.querySelector(`svg.feather.feather-${toggleIcon}`).innerHTML =
+      feather.icons[newToggleIcon].toSvg();
+
+    localStorage.setItem("theme", targetTheme);
+  };
+}
+
 function main() {
+  themeToggle();
   scrollToTop();
   fadeInOnScroll();
 }
