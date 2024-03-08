@@ -14,7 +14,6 @@ function fadeInOnScroll() {
     rootMargin: "0px",
     threshold: 0.3,
   });
-
   contentToFadeIn.forEach((el) => observer.observe(el));
 }
 
@@ -25,42 +24,62 @@ function scrollToTop() {
   });
 }
 
-function themeToggle() {
+function colorTheme() {
+  const rootElement = document.documentElement;
   const toggle = document.getElementById("theme-toggle");
 
-  const storedTheme =
-    localStorage.getItem("theme") ||
-    (window.matchMedia("(prefers-color-scheme: dark)").matches
+  /**
+   * @returns {"light" | "dark"} Theme stored either in localStorage or device preference
+   */
+  function getPreferredTheme() {
+    return localStorage.getItem("theme") ||
+      window.matchMedia("(prefers-color-scheme: dark)").matches
       ? "dark"
-      : "light");
-
-  if (storedTheme) {
-    document.documentElement.setAttribute("data-theme", storedTheme);
+      : "light";
   }
 
-  toggle.onclick = function () {
-    const currentTheme = document.documentElement.getAttribute("data-theme");
-    let targetTheme = "light";
-    let toggleIcon = "sun";
-    let newToggleIcon = "moon";
+  /**
+   * @param {"light" | "dark"} theme
+   * @returns {void}
+   */
+  function setCurrentTheme(theme) {
+    rootElement.setAttribute("data-theme", theme);
+    const icon = theme === "light" ? "sun" : "moon";
+    toggle.querySelector("svg.feather").innerHTML = feather.icons[icon].toSvg();
+    localStorage.setItem("theme", theme);
+  }
 
-    if (currentTheme === "light") {
-      targetTheme = "dark";
-    } else {
-      toggleIcon = "moon";
-      newToggleIcon = "sun";
-    }
+  function toggleTheme() {
+    const isLightTheme = localStorage.getItem("theme") === "light";
+    const targetTheme = isLightTheme ? "dark" : "light";
+    setCurrentTheme(targetTheme);
+  }
 
-    document.documentElement.setAttribute("data-theme", targetTheme);
-    toggle.querySelector(`svg.feather.feather-${toggleIcon}`).innerHTML =
-      feather.icons[newToggleIcon].toSvg();
+  function listenForSystemThemeChanges() {
+    window
+      .matchMedia("(prefers-color-scheme: dark)")
+      .addEventListener("change", function (event) {
+        setCurrentTheme(event.matches ? "dark" : "light");
+      });
+  }
 
-    localStorage.setItem("theme", targetTheme);
-  };
+  setCurrentTheme(getPreferredTheme());
+  toggle.onclick = toggleTheme;
+  listenForSystemThemeChanges();
+}
+
+function loadIcons() {
+  feather.replace();
+}
+
+function loadHljs() {
+  hljs.highlightAll();
 }
 
 function main() {
-  themeToggle();
+  loadIcons();
+  loadHljs();
+  colorTheme();
   scrollToTop();
   fadeInOnScroll();
 }

@@ -41,6 +41,7 @@
   --xl-device: 80em;
 }
 
+html,
 html[data-theme="light"] {
   --bg-primary: var(--grey-1);
   --bg-secondary: var(--grey-5);
