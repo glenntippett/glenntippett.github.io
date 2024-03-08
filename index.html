@@ -16,6 +16,13 @@
   <link rel="stylesheet" href="styles/index.css">
   <!-- Icons -->
   <script src="https://unpkg.com/feather-icons"></script>
+  <!-- Code snippets -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/a11y-dark.min.css"
+    integrity="sha512-Vj6gPCk8EZlqnoveEyuGyYaWZ1+jyjMPg8g4shwyyNlRQl6d3L9At02ZHQr5K6s5duZl/+YKMnM3/8pDhoUphg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"
+    integrity="sha512-D9gUyxqja7hBtkWpPWGt9wfbfaMGVt9gnyCvYa+jojwwPHLCzUm5i8rpk7vD7wNee9bA35eYIjobYPaQuKS1MQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <title>Glenn Tippett</title>
 </head>
 
@@ -23,14 +30,13 @@
   <!-- Navbar -->
   <div class="container">
     <nav class="navbar container">
-      <h5 id="title" class="navbar__link navbar--action">Glenn Tippett</h5>
+      <h5 id="title" class="navbar__link hoverable">Glenn Tippett</h5>
       <div class="navbar--right">
-        <a href="https://github.com/glenntippett" target="_blank" class="navbar__link navbar--action">Github</a>
-        <span id="theme-toggle" class="navbar--action">
+        <a href="https://github.com/glenntippett" target="_blank" class="navbar__link hoverable">Github</a>
+        <span id="theme-toggle" class="hoverable">
           <i data-feather="sun"></i>
         </span>
       </div>
-
     </nav>
   </div>
 
@@ -38,13 +44,42 @@
     <div class="container">
       <!-- Header -->
       <section class="content header">
-        <p class="subheading fade">
-          This page is currently under construction. Check back a bit later and there might
-          be something a bit more interesting here...
+        <p class="header__description">
+          Hello, I'm Glenn, a developer living in Melbourne, Australia.
+        </p>
+        <p class="header__description">
+          I specialise in constructing web applications using a tech stack that includes TypeScript, React, GraphQL and
+          MongoDB, among various other technologies.
+        </p>
+        <p class="header__description">
+          My expertise extends to serverless architecture, where I frequently engage with AWS Lambda, Step Functions,
+          EventBridge and SQS (to name a few), whilst managing and provisioning infrastructure using
+          Terraform.
+        </p>
+        <p class="header__description">
+          Beyond my professional work, I am passionate about advocating for tech education. Outside of my day job,
+          you'll often find me instructing programming with Ruby on Rails at a web development bootcamp.
         </p>
       </section>
 
       <hr />
+
+      <section class="code-snippet">
+        <h6>Example code snippet</h6>
+        <article class="code-snippet__box content fade">
+          <div class="code-snippet__tabs">
+            <span class="code-snippet__tab hoverable">Preview</span>
+            <span class="code-snippet__tab hoverable active">Code</span>
+          </div>
+          <pre>
+          <code class="language-css">
+            p { 
+              color: red 
+            }
+          </code>
+        </pre>
+        </article>
+      </section>
 
       <section class="content stack stack--gap">
         <p class="fade">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis quasi minus
@@ -90,49 +125,12 @@
           blanditiis repudiandae consequuntur enim nemo!</p>
       </section>
     </div>
-    <section class="section--inverted">
-      <div class="container">
-        <p class="fade">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis quasi
-          minus
-          deleniti illo
-          nihil sit maxime
-          nisi? Exercitationem accusantium sequi molestiae corporis excepturi, ducimus necessitatibus nam, doloribus eum
-          repudiandae unde. Suscipit obcaecati ipsum distinctio ducimus explicabo, modi, aliquid sequi praesentium
-          delectus voluptate sunt nobis, iusto doloremque cum ea! Facilis obcaecati illum harum repellat. Maxime
-          voluptatum, error repellendus, facere cum neque, quisquam quod ipsum alias dignissimos dolore corrupti? Sunt
-          itaque neque quod, eos autem aperiam earum voluptates aliquam delectus tempora iusto aliquid saepe accusamus
-          consequatur! Ipsa culpa amet, molestias consectetur eligendi laudantium veritatis placeat suscipit corrupti
-          blanditiis repudiandae consequuntur enim nemo!</p>
-        <p class="fade">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis quasi minus
-          deleniti illo
-          nihil sit maxime
-          nisi? Exercitationem accusantium sequi molestiae corporis excepturi, ducimus necessitatibus nam, doloribus eum
-          repudiandae unde. Suscipit obcaecati ipsum distinctio ducimus explicabo, modi, aliquid sequi praesentium
-          delectus voluptate sunt nobis, iusto doloremque cum ea! Facilis obcaecati illum harum repellat. Maxime
-          voluptatum, error repellendus, facere cum neque, quisquam quod ipsum alias dignissimos dolore corrupti? Sunt
-          itaque neque quod, eos autem aperiam earum voluptates aliquam delectus tempora iusto aliquid saepe accusamus
-          consequatur! Ipsa culpa amet, molestias consectetur eligendi laudantium veritatis placeat suscipit corrupti
-          blanditiis repudiandae consequuntur enim nemo!</p>
-        <p class="fade">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis quasi minus
-          deleniti illo
-          nihil sit maxime
-          nisi? Exercitationem accusantium sequi molestiae corporis excepturi, ducimus necessitatibus nam, doloribus eum
-          repudiandae unde. Suscipit obcaecati ipsum distinctio ducimus explicabo, modi, aliquid sequi praesentium
-          delectus voluptate sunt nobis, iusto doloremque cum ea! Facilis obcaecati illum harum repellat. Maxime
-          voluptatum, error repellendus, facere cum neque, quisquam quod ipsum alias dignissimos dolore corrupti? Sunt
-          itaque neque quod, eos autem aperiam earum voluptates aliquam delectus tempora iusto aliquid saepe accusamus
-          consequatur! Ipsa culpa amet, molestias consectetur eligendi laudantium veritatis placeat suscipit corrupti
-          blanditiis repudiandae consequuntur enim nemo!</p>
-      </div>
-    </section>
-
   </main>
 
-
   <script src="scripts/index.js"></script>
-  <script>
-    feather.replace();
-  </script>
+  <!-- Icons -->
+  <script>feather.replace();</script>
+  <script>hljs.highlightAll();</script>
 </body>
 
 </html>
