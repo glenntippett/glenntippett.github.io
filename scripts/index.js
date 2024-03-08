@@ -32,10 +32,12 @@ function colorTheme() {
    * @returns {"light" | "dark"} Theme stored either in localStorage or device preference
    */
   function getPreferredTheme() {
-    return localStorage.getItem("theme") ||
-      window.matchMedia("(prefers-color-scheme: dark)").matches
-      ? "dark"
-      : "light";
+    return (
+      localStorage.getItem("theme") ||
+      (window.matchMedia("(prefers-color-scheme: dark)").matches
+        ? "dark"
+        : "light")
+    );
   }
 
   /**
