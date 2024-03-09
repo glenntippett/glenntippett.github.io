@@ -1,0 +1,46 @@
+.hoverable {
+  opacity: 0.6;
+  transition: 300ms;
+}
+
+.hoverable:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.hoverable.active {
+  opacity: 1;
+}
+
+.code-snippet {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+}
+
+.code-snippet__box {
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+}
+
+.code-snippet__box pre {
+  display: flex;
+  overflow-x: hidden;
+}
+
+.code-snippet__box pre code {
+  font-family: var(--font-heading);
+  font-size: var(--space-sm);
+  border-bottom-left-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
+  width: 100%;
+  line-height: var(--space-md);
+}
+
+.code-snippet__tabs {
+  display: flex;
+  gap: var(--space-md);
+  padding: var(--space-sm) var(--space-md);
+  font-size: var(--space-sm);
+}

@@ -3,109 +3,70 @@
 
 <head>
   <title>Glenn Tippett - Web Developer</title>
-  <!-- Favicon -->
-  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-  <link rel="icon" href="/favicon.ico" type="image/x-icon">
-
   <meta name="description" content="Glenn Tippett, web developer and fullstack developer">
   <meta property="og:title" content="Glenn Tippett - Web Developer" />
   <meta property="og:description" content="Web developer living in Melbourne, Australia." />
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-    rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-      rel="stylesheet">
-  </noscript>
-
   <!-- Icons -->
   <script src="https://unpkg.com/feather-icons"></script>
-
-  <!-- Code snippets -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/a11y-dark.min.css"
-    integrity="sha512-Vj6gPCk8EZlqnoveEyuGyYaWZ1+jyjMPg8g4shwyyNlRQl6d3L9At02ZHQr5K6s5duZl/+YKMnM3/8pDhoUphg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" rel="preload" as="style"
-    onload="this.onload=null;this.rel='stylesheet'" />
-  <noscript>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/a11y-dark.min.css"
-      integrity="sha512-Vj6gPCk8EZlqnoveEyuGyYaWZ1+jyjMPg8g4shwyyNlRQl6d3L9At02ZHQr5K6s5duZl/+YKMnM3/8pDhoUphg=="
-      crossorigin="anonymous" referrerpolicy="no-referrer" />
-  </noscript>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"
-    integrity="sha512-D9gUyxqja7hBtkWpPWGt9wfbfaMGVt9gnyCvYa+jojwwPHLCzUm5i8rpk7vD7wNee9bA35eYIjobYPaQuKS1MQ=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
   <!-- Stylesheets -->
-  <link rel="stylesheet" href="styles/reset.css">
-  <link rel="stylesheet" href="styles/index.css">
+  <link rel="stylesheet" href="./stylesheet.css">
+  <link rel="stylesheet" href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css" />
 </head>
 
 <body>
-  <!-- Navbar -->
-  <div class="container">
-    <nav class="navbar container">
-      <h5 id="title" class="navbar__link hoverable">Glenn Tippett</h5>
-      <div class="navbar--right">
-        <a href="https://github.com/glenntippett" target="_blank" class="navbar__link hoverable">Github</a>
-        <span id="theme-toggle" class="hoverable">
-          <i data-feather="sun"></i>
-        </span>
+  <header>
+    <nav class="baskerville dt w-100 border-box pa3 ph5-ns">
+      <a class="dtc v-mid mid-gray link dim w-25" href="#" title="Home">Glenn Tippett</a>
+      <div class="dtc v-mid w-75 tr flex justify-end items-center">
+        <a class="link dim dark-gray f6 f5-ns dib mr3 mr4-ns" href="https://github.com/glenntippett" target="_blank"
+          title="Github">Github</a>
+        <a class="link dim dark-gray f6 f5-ns dib mr3 mr4-ns" href="#" title="Contact">Contact</a>
+        <i data-feather="sun" id="theme-toggle" class="link dim dark-gray f6 f5-ns dib"></i>
       </div>
     </nav>
+  </header>
+
+  <div class="avenir flex items-center justify-center pa4 bg-dark-gray" style="color:#FFFF00;">
+    <svg class="w1" data-icon="info" viewBox="0 0 32 32" style="fill:currentcolor">
+      <title>info icon</title>
+      <path
+        d="M16 0 A16 16 0 0 1 16 32 A16 16 0 0 1 16 0 M19 15 L13 15 L13 26 L19 26 z M16 6 A3 3 0 0 0 16 12 A3 3 0 0 0 16 6">
+      </path>
+    </svg>
+    <span class="lh-title ml3">This site is currently under construction</span>
   </div>
 
   <main>
-    <div class="container">
-      <!-- Header -->
-      <section class="content header">
-        <span>This site is currently under construction --</span>
-        <br />
-        <p class="header__description">
-          Hello, I'm Glenn, a developer living in Melbourne, Australia.
-        </p>
-        <p class="header__description">
-          I specialise in constructing web applications using a tech stack that includes TypeScript, React, GraphQL and
-          MongoDB, among various other technologies.
-        </p>
-        <p class="header__description">
-          My expertise extends to serverless architecture, where I frequently engage with AWS Lambda, Step Functions,
-          EventBridge and SQS (to name a few), whilst managing and provisioning infrastructure using
-          Terraform.
-        </p>
-        <p class="header__description">
-          Beyond my professional work, I am passionate about advocating for tech education. Outside of my day job,
-          you'll often find me instructing programming with Ruby on Rails at a web development bootcamp.
-        </p>
-      </section>
-
-      <hr />
-
-      <section class="code-snippet">
-        <h6>Example code snippet</h6>
-        <article class="code-snippet__box content fade">
-          <div class="code-snippet__tabs">
-            <span class="code-snippet__tab hoverable">Preview</span>
-            <span class="code-snippet__tab hoverable active">Code</span>
-          </div>
-          <pre>
-          <code class="language-css">
-            p { 
-              color: red 
-            }
-          </code>
-        </pre>
-        </article>
-      </section>
-    </div>
+    <section class="avenir ph4 vh-25 mv5">
+      <p class="f6 lh-copy measure">
+        Hello, I'm Glenn, a developer living in Melbourne, Australia.<br />
+        I specialise in constructing web applications using a tech stack that includes TypeScript, React, GraphQL and
+        MongoDB, among various other technologies.<br />
+        My expertise extends to serverless architecture, where I frequently engage with AWS Lambda, Step Functions,
+        EventBridge and SQS (to name a few), whilst managing and provisioning infrastructure using
+        Terraform.<br />
+        Beyond my professional work, I am passionate about advocating for tech education. Outside of my day job,
+        you'll often find me instructing programming with Ruby on Rails at a web development bootcamp.
+      </p>
+    </section>
   </main>
+
+  <footer class="ph3 ph4-ns pv6 bt b--black-10 black-70">
+    <a href="mailto:" class="link b f3 f2-ns dim black-70 lh-solid">hello@email.com</a>
+    <p class="f6 db b ttu lh-solid">© 2016 COMPANY Inc.</p>
+    <div class="mt5">
+      <a href="#" title="Home" class="f6 dib pr2 mid-gray dim">Home</a>
+      <a href="https://github.com/glenntippett" target="_blank" title="Github"
+        class="f6 dib ph2 mid-gray dim">Github</a>
+      <a href="/" title="Contact" class="f6 dib pl2 mid-gray dim">Contact</a>
+    </div>
+  </footer>
 
   <script src="scripts/index.js"></script>
 </body>
