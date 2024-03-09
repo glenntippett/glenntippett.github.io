@@ -9,8 +9,6 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- Icons -->
-  <script src="https://unpkg.com/feather-icons"></script>
   <!-- Favicon -->
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
@@ -21,13 +19,15 @@
 
 <body>
   <header>
-    <nav class="baskerville dt w-100 border-box pa3 ph5-ns">
+    <nav class="avenir dt w-100 border-box pa3 ph5-ns">
       <a class="dtc v-mid mid-gray link dim w-25" href="#" title="Home">Glenn Tippett</a>
       <div class="dtc v-mid w-75 tr flex justify-end items-center">
         <a class="link dim dark-gray f6 f5-ns dib mr3 mr4-ns" href="https://github.com/glenntippett" target="_blank"
           title="Github">Github</a>
         <a class="link dim dark-gray f6 f5-ns dib mr3 mr4-ns" href="#" title="Contact">Contact</a>
-        <i data-feather="sun" id="theme-toggle" class="link dim dark-gray f6 f5-ns dib"></i>
+        <button aria-label="Activate light mode" class="bn bg-inherit pa0 link dim dark-gray f6 f5-ns dib">
+          <img src="./assets/sun.svg" alt="sun" data-feather="sun" id="theme-toggle">
+        </button>
       </div>
     </nav>
   </header>

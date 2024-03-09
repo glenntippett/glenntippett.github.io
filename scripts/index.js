@@ -70,17 +70,11 @@ function colorTheme() {
   listenForSystemThemeChanges();
 }
 
-function loadIcons() {
-  feather.replace();
-}
-
 function loadHljs() {
   hljs.highlightAll();
 }
 
 function main() {
-  loadIcons();
-  loadHljs();
   colorTheme();
   scrollToTop();
   fadeInOnScroll();
